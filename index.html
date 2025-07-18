@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html class='no-js'>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+	<meta charset='utf-8'>
+	<link rel='icon' href='img/favicon.ico' type='image/png'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='description' content='Bomb Defusal Manual for the video game Keep Talking and Nobody Explodes'>
+	<title>KTANE v1 Simplified - Complete Manual</title>
+	<meta name='viewport' content='initial-scale=1'> 
+	<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' type='text/css' href='css/normalize.css'>
+	<link rel='stylesheet' type='text/css' href='css/main.css'>
+	<style>
+		.navigation-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin: 20px 0;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.9);
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+		
+		.nav-button {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 15px;
+			background: #f8f8f8;
+			border: 2px solid #ddd;
+			border-radius: 8px;
+			text-decoration: none;
+			color: #333;
+			transition: all 0.3s ease;
+			text-align: center;
+		}
+		
+		.nav-button:hover {
+			background: #e8e8e8;
+			border-color: #999;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		}
+		
+		.nav-button img {
+			width: 40px;
+			height: 40px;
+			margin-bottom: 8px;
+		}
+		
+		.nav-button h3 {
+			margin: 0;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		
+		.module-section {
+			margin: 40px 0;
+			padding: 20px;
+			background: rgba(255, 255, 255, 0.95);
+			border-radius: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+		
+		.module-section h2 {
+			border-bottom: 2px solid #333;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+		}
+		
+		.back-to-top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			background: #333;
+			color: white;
+			padding: 10px 15px;
+			border-radius: 5px;
+			text-decoration: none;
+			opacity: 0.8;
+			transition: opacity 0.3s;
+		}
+		
+		.back-to-top:hover {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class='section'>
+		<div class='page'>
+			<div class='page-header'>
+				<span class='page-header-doc-title'>Keep Talking and Nobody Explodes v.1 Simplified</span>
+				<span class='page-header-section-title'>Complete Manual</span>
+			</div>
+			<div class='page-content'>
+				<h1>Bomb Defusal Manual</h1>
+				<p>Select a module from the navigation below to jump to its instructions:</p>
+				
+				<div class='navigation-grid'>
+					<a href='#button' class='nav-button'>
+						<img src='img/ButtonComponent.svg' alt='Button'>
+						<h3>The Button</h3>
+					</a>
+					<a href='#wires' class='nav-button'>
+						<img src='img/WireComponent.svg' alt='Wires'>
+						<h3>Wires</h3>
+					</a>
+					<a href='#complicated-wires' class='nav-button'>
+						<img src='img/ComplexWireComponent.svg' alt='Complicated Wires'>
+						<h3>Complicated Wires</h3>
+					</a>
+					<a href='#keypad' class='nav-button'>
+						<img src='img/KeypadComponent.svg' alt='Keypad'>
+						<h3>Keypad</h3>
+					</a>
+					<a href='#maze' class='nav-button'>
+						<img src='img/MazeComponent.svg' alt='Maze'>
+						<h3>Maze</h3>
+					</a>
+					<a href='#memory' class='nav-button'>
+						<img src='img/MemoryComponent.svg' alt='Memory'>
+						<h3>Memory</h3>
+					</a>
+					<a href='#morse-code' class='nav-button'>
+						<img src='img/MorseCodeComponent.svg' alt='Morse Code'>
+						<h3>Morse Code</h3>
+					</a>
+					<a href='#needy-knob' class='nav-button'>
+						<img src='img/NeedyKnobComponent.svg' alt='Needy Knob'>
+						<h3>Needy Knob</h3>
+					</a>
+					<a href='#needy-misc' class='nav-button'>
+						<img src='img/NeedyComponent.svg' alt='Needy Misc'>
+						<h3>Needy Misc</h3>
+					</a>
+					<a href='#password' class='nav-button'>
+						<img src='img/PasswordComponent.svg' alt='Password'>
+						<h3>Password</h3>
+					</a>
+					<a href='#simon' class='nav-button'>
+						<img src='img/SimonComponent.svg' alt='Simon Says'>
+						<h3>Simon Says</h3>
+					</a>
+					<a href='#whos-on-first' class='nav-button'>
+						<img src='img/WhosOnFirstComponent.svg' alt='Who\'s on First'>
+						<h3>Who's on First</h3>
+					</a>
+					<a href='#wire-sequence' class='nav-button'>
+						<img src='img/WireSequenceComponent.svg' alt='Wire Sequence'>
+						<h3>Wire Sequence</h3>
+					</a>
+				</div>
+				
+				<!-- Module content will be added here -->
+				
+				<div id="button" class="module-section">
+					<img src='img/ButtonComponent.svg' class='diagram'>
+					<h2>On the Subject of The Button</h2>
+					<p class='flavour-text'>
+						You might think that a button telling you to press it is pretty straightforward. That's the kind of thinking that gets people exploded.
+					</p>
+
+					<p class='appendix-reference'>
+						See Appendix A for indicator identification reference.<br/>
+						See Appendix B for battery identification reference.
+					</p><p>
+						Follow these rules in the order they are listed. Perform the first action that applies:
+					</p>
+
+					<ol><li>
+						<span class='color-blue'>Blue</span> 'ABORT' : hold
+					</li><li>
+						'DETONATE' AND (#batteries >= 2) : press and release
+					</li><li>
+						<span class='color-white'>White</span> AND indicator 'CAR' : hold
+					</li><li>
+						(#batteries >= 3) AND indicator 'FRK' : press and release
+					</li><li>
+						<span class='color-red'>Red</span> 'HOLD' : press and release
+					</li><li>
+						else : hold
+					</li></ol>
+
+					<h3>Releasing a Held Button</h3>
+					<p>
+						If you start holding the button down, a colored strip will light up on the right side of the module. Based on its color you must release the button when the timer shows the given number in any position:
+					</p>
+
+					<ul><li>
+						<em><span class='color-yellow'>Yellow</span> strip:</em> Release on 5.
+					</li><li>
+						<em><span class='color-blue'>Blue</span> strip:</em> Release on 4.
+					</li><li>
+						<em>Else:</em> Release on 1.
+					</li></ul>
+				</div>
+
+				<div id="wires" class="module-section">
+					<img src='img/WireComponent.svg' class='diagram'>
+					<h2>On the Subject of Wires</h2>
+					<p class='flavour-text'>
+						Wires are the lifeblood of electronics! Wait, no, electricity is the lifeblood. Wires are more like the arteries. The veins? No matter…
+					</p>
+
+					<ul>
+						<li>A wire module can have 3-6 wires on it.</li>
+						<li>Only the <em>one</em> correct wire needs to be cut.</li>
+						
+						<li>Wire ordering begins with the first on the top.</li>
+					</ul>
+
+					<table>
+						<tr><td>
+							<strong><em>3 wires:</em></strong>
+							<ul><li>
+								if (#<span class='color-red'>red</span> == 0) : cut second wire
+							</li><li>
+								if (#<span class='color-blue'>blue</span> > 1) AND (third != <span class='color-white'>white</span>) : cut last <span class='color-blue'>blue</span> wire
+							</li><li>
+								else : cut third wire
+							</li></ul>
+						</td></tr>
+
+						<tr><td>
+							<strong><em>4 wires:</em></strong>
+							<ul>
+							<strong>ASK</strong> 'Is SN odd?' 'How many <span class='color-red'>red</span>?'
+							<li>
+								if (#<span class='color-red'>red</span> > 1) AND (SN == odd) : cut last <span class='color-red'>red</span> wire
+							</li>
+							<strong>ASK</strong> 'Describe fourth wire.'
+							<li>
+								if (#<span class='color-red'>red</span> == 0) AND (fourth == <span class='color-yellow'>yellow</span>) : cut first wire
+							</li>
+							<strong>ASK</strong> 'How many <span class='color-blue'>blue</span>?'
+							<li>
+								if (#<span class='color-blue'>blue</span> == 1) : cut first wire
+							</li>
+							<strong>ASK</strong> 'How many <span class='color-yellow'>yellow</span>?'
+							<li>
+								if (#<span class='color-yellow'>yellow</span> > 1) : cut fourth wire
+							</li><li>
+								else : cut second wire
+							</li></ul>
+						</td></tr>
+
+						<tr><td>
+							<strong><em>5 wires:</em></strong>
+							<ul>
+							<strong>ASK</strong> 'Is SN odd?' 'Describe 5th wire.'
+							<li>
+								if (5th == <span class='color-black'>black</span>) AND (SN == odd) : cut fourth wire
+							</li>
+							<strong>ASK</strong> 'How many <span class='color-red'>red</span> / <span class='color-black'>black</span> / <span class='color-yellow'>yellow</span>?'
+							</li><li>
+								if (#<span class='color-black'>black</span> == 0) AND (#<span class='color-red'>red</span> != 1) OR (#<span class='color-yellow'>yellow</span> < 2) : cut second wire
+							</li><li>
+								else : cut first wire
+							</li></ul>
+						</td></tr>
+
+						<tr><td>
+							<strong><em>6 wires:</em></strong>
+							<ul>
+							<strong>ASK</strong> 'Is SN odd?' 'How many <span class='color-yellow'>yellow</span> / <span class='color-red'>red</span> / <span class='color-white'>white</span>?'
+							<li>
+								if (#<span class='color-yellow'>yellow</span> == 0) AND (SN == ODD) : cut third wire
+							</li><li>
+								if (#<span class='color-yellow'>yellow</span> != 1) AND (#<span class='color-red'>red</span> == 0) AND (#<span class='color-white'>white</span> < 2) : cut last wire
+							</li><li>
+								else : cut fourth wire
+							</li></ul>
+						</td></tr>
+					</table>
+				</div>
+
+				<div id="complicated-wires" class="module-section">
+					<img src='img/ComplexWireComponent.svg' class='diagram'>
+					<h2>On the Subject of Complicated Wires</h2>
+					<p class='flavour-text'>
+						These wires aren't like the others. Some have stripes! That makes them completely different. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise…
+					</p>
+
+					<ul><li>
+						Look at each wire: there is an LED above the wire and a space for a '★' symbol below the wire.
+					</li><li>
+						For <b>each</b> Wire/LED/Star combination, use the table below to decide whether or not to cut the wire.
+					</li><li>
+						Each wire may be striped with multiple colors.
+					</li></ul>
+
+					</br>
+					<div>
+						<table id='complextable'>
+							<tr><th>Wire Color<th>-<th>LED<th>★<th>LED + ★
+
+							<tr><th><span class='color-white'>None</span>
+								<td> CUT
+								<td> NO
+								<td> CUT
+								<td> Batteries > 1
+
+							<tr><th><span class='color-red'>Red</span>
+								<td> Serial # even
+								<td> Batteries > 1
+								<td> CUT
+								<td> Batteries > 1
+
+							<tr><th><span class='color-blue'>Blue</span>
+								<td> Serial # even
+								<td> Parallel port
+								<td> NO
+								<td> Parallel port
+
+							<tr><th><span class='color-red'>Red</span> + <span class='color-blue'>Blue</span>
+								<td> Serial # even
+								<td> Serial # even
+								<td> Parallel port
+								<td> NO
+						</table>
+					</div>
+					</br>
+
+					<div style='clear:both;'/>
+						<p class='appendix-reference'>
+							See Appendix B for battery identification reference.<br/>
+							See Appendix C for port identification reference.
+						</p>
+					</div>
+				</div>
+
+				<div id="keypad" class="module-section">
+					<img src='img/KeypadComponent.svg' class='diagram'>
+					<h2>On the Subject of Keypads</h2>
+					<p class='flavour-text'>
+						I'm not sure what these symbols are, but I suspect they have something to do with occult.
+					</p>
+
+					<ul>
+						<li>
+							Only one column below has all four of the symbols from the keypad.
+						</li>
+						<li>
+							Press the four buttons in the order their symbols appear from top to bottom within that column.
+						</li>
+					</ul>
+
+					<table class='keypad-table'>
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/28-balloon.png'></img>
+							<p class='keypad-label'>Racket</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/16-euro.png'></img>
+							<p class='keypad-label'>E</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/1-copyright.png'></img>
+							<p class='keypad-label'>Copyright</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/11-six.png'></img>
+							<p class='keypad-label'>Six</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/24-pitchfork.png'></img>
+							<p class='keypad-label'>Psi</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/11-six.png'></img>
+							<p class='keypad-label'>Six</p>
+
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/13-at.png'></img>
+							<p class='keypad-label'>A</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/28-balloon.png'></img>
+							<p class='keypad-label'>Racket</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/8-pumpkin.png'></img>
+							<p class='keypad-label'>W</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/21-paragraph.png'></img>
+							<p class='keypad-label'>Paragraph</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/4-smileyface.png'></img>
+							<p class='keypad-label'>Smiley</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/16-euro.png'></img>
+							<p class='keypad-label'>E</p>
+
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/30-upsidedowny.png'></img>
+							<p class='keypad-label'>Lambda</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/23-leftc.png'></img>
+							<p class='keypad-label'>Back C</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/26-cursive.png'></img>
+							<p class='keypad-label'>Q</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/31-bt.png'></img>
+							<p class='keypad-label'>B</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/31-bt.png'></img>
+							<p class='keypad-label'>B</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/27-tracks.png'></img>
+							<p class='keypad-label'>Not Equals</p>
+
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/12-squigglyn.png'></img>
+							<p class='keypad-label'>Lightning</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/26-cursive.png'></img>
+							<p class='keypad-label'>Q</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/5-doublek.png'></img>
+							<p class='keypad-label'>K's</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/7-squidknife.png'></img>
+							<p class='keypad-label'>Alien</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/22-rightc.png'></img>
+							<p class='keypad-label'>C</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/14-ae.png'></img>
+							<p class='keypad-label'>AE</p>
+
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/7-squidknife.png'></img>
+							<p class='keypad-label'>Alien</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/3-hollowstar.png'></img>
+							<p class='keypad-label'>Empty Star</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/15-meltedthree.png'></img>
+							<p class='keypad-label'>Three</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/5-doublek.png'></img>
+							<p class='keypad-label'>K's</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/21-paragraph.png'></img>
+							<p class='keypad-label'>Paragraph</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/24-pitchfork.png'></img>
+							<p class='keypad-label'>Psi</p>
+
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/9-hookn.png'></img>
+							<p class='keypad-label'>H</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/9-hookn.png'></img>
+							<p class='keypad-label'>H</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/30-upsidedowny.png'></img>
+							<p class='keypad-label'>Lambda</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/20-questionmark.png'></img>
+							<p class='keypad-label'>Question</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/19-dragon.png'></img>
+							<p class='keypad-label'>Dragon</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/18-nwithhat.png'></img>
+							<p class='keypad-label'>N</p>
+
+						<tr>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/23-leftc.png'></img>
+							<p class='keypad-label'>Back C</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/20-questionmark.png'></img>
+							<p class='keypad-label'>Question</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/3-hollowstar.png'></img>
+							<p class='keypad-label'>Empty Star</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/4-smileyface.png'></img>
+							<p class='keypad-label'>Smiley</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/2-filledstar.png'></img>
+							<p class='keypad-label'>Filled Star</p>
+
+						<td class='keypad-table-spacer'>
+						<td class='keypad-table-column'>
+							<img class='keypad-symbol-image' src='img/symbols/6-omega.png'></img>
+							<p class='keypad-label'>Omega</p>
+					</table>
+				</div>
+
+				<div id="maze" class="module-section">
+					<img src='img/MazeComponent.svg' class='diagram'>
+					<h2>On the Subject of Mazes</h2>
+					<p class='flavour-text'>
+						This seems to be some kind of maze, probably stolen off of a restaurant placemat.
+					</p>
+
+					<ul><li>
+						Find the maze with matching circular markings.
+					</li><li>
+						The defuser must navigate the white light to the red triangle using the arrow buttons.
+					</li><li>
+						<strong>Warning:</strong> Do not cross the lines shown in the maze. These lines are invisible on the bomb.
+					</li><li>
+						For quick reference, the unique <strong>row positions</strong> for the indicator circles are marked to the left of each maze.
+					</li></ul>
+
+									1-6 <img class='maze' src='img/maze/maze0.svg'/>
+					&nbsp;&nbsp;2-5 <img class='maze' src='img/maze/maze1.svg'/>
+					&nbsp;&nbsp;4-6 <img class='maze' src='img/maze/maze2.svg'/>
+
+									1-1 <img class='maze' src='img/maze/maze3.svg'/>
+					&nbsp;&nbsp;4-5 <img class='maze' src='img/maze/maze4.svg'/>
+					&nbsp;&nbsp;3-5 <img class='maze' src='img/maze/maze5.svg'/>
+
+									2-2 <img class='maze' src='img/maze/maze6.svg'/>
+					&nbsp;&nbsp;3-4 <img class='maze' src='img/maze/maze7.svg'/>
+					&nbsp;&nbsp;1-3 <img class='maze' src='img/maze/maze8.svg'/>
+				</div>
+
+				<div id="memory" class="module-section">
+					<img src='img/MemoryComponent.svg' class='diagram'>
+					<h2>On the Subject of Memory</h2>
+					<p class='flavour-text'>
+						Memory is a fragile thing but so is everything else when a bomb goes off, so pay attention!
+					</p>
+
+					<ul><li>
+						Press the correct button to progress the module to the next stage. Complete all stages to disarm the module.
+					</li><li>
+						Pressing an incorrect button will reset the module back to stage 1.
+					</li><li>
+						Button positions are ordered from left to right.
+					</li></ul>
+
+					<div class='memory-rules'>
+						<h4>Stage 1:</h4>
+						<ul><li>&nbsp;
+							Display is 1 - Second position
+						</li><li>&nbsp;
+							Display is 2 - Second position
+						</li><li>&nbsp;
+							Display is 3 - Third position
+						</li><li>&nbsp;
+							Display is 4 - Fourth position
+						</li></ul>
+
+						<h4>Stage 2:</h4>
+						<ul><li>&nbsp;
+							Display is 1 - Label '4'
+						</li><li>&nbsp;
+							Display is 2 - <u>Stage 1</u>: position
+						</li><li>&nbsp;
+							Display is 3 - First position
+						</li><li>&nbsp;
+							Display is 4 - <u>Stage 1</u>: position
+						</li></ul>
+
+						<h4>Stage 3:</h4>
+						<ul><li>&nbsp;
+							Display is 1 - <u>Stage 2</u>: label
+						</li><li>&nbsp;
+							Display is 2 - <u>Stage 1</u>: label
+						</li><li>&nbsp;
+							Display is 3 - Third position
+						</li><li>&nbsp;
+							Display is 4 - Label '4'
+						</li></ul>
+
+						<h4>Stage 4:</h4>
+						<ul><li>&nbsp;
+							Display is 1 - <u>Stage 1</u>: position
+						</li><li>&nbsp;
+							Display is 2 - First position
+						</li><li>&nbsp;
+							Display is 3 - <u>Stage 2</u>: position
+						</li><li>&nbsp;
+							Display is 4 - <u>Stage 2</u>: position
+						</li></ul>
+
+						<h4>Stage 5:</h4>
+						<ul><li>&nbsp;
+							Display is 1 - <u>Stage 1</u>: label
+						</li><li>&nbsp;
+							Display is 2 - <u>Stage 2</u>: label
+						</li><li>&nbsp;
+							Display is 3 - <u>Stage 4</u>: label
+						</li><li>&nbsp;
+							Display is 4 - <u>Stage 3</u>: label
+						</li></ul>
+					</div>
+				</div>
+
+				<div id="morse-code" class="module-section">
+					<img src='img/MorseCodeComponent.svg' class='diagram'>
+					<h2>On the Subject of Morse Code</h2>
+					<p class='flavour-text'>
+						An antiquated form of naval communication? What next? At least it's genuine Morse Code, so pay attention and you might just learn something.
+					</p>
+
+					<ul><li>
+						Interpret the signal from the flashing light using the Morse Code chart to spell one of the words in the table.
+					</li><li>
+						The signal will loop, with a long gap between repetitions.
+					</li><li>
+						Once the word is identified, set the corresponding frequency and press the transmit (TX) button.
+					</li></ul>
+
+					<img id='morseCodeChart' src='img/MorseCodeTree.png'/>
+					<table>
+						<tr>
+							<th>B E A T S
+							<td>3.600
+
+							<th>B I S T R O
+							<td>3.552
+
+							<th>B O M B S
+							<td>3.565
+
+							<th>B O X E S
+							<td>3.535
+						<tr>
+							<th>B R E A K
+							<td>3.572
+
+							<th>B R I C K
+							<td>3.575
+
+							<th>F L I C K
+							<td>3.555
+
+							<th>H A L L S
+							<td>3.515
+						<tr>
+							<th>L E A K S
+							<td>3.542
+
+							<th>S H E L L
+							<td>3.505
+
+							<th>S L I C K
+							<td>3.522
+
+							<th>S T E A K
+							<td>3.582
+						<tr>
+							<th>S T I N G
+							<td>3.592
+
+							<th>S T R O B E
+							<td>3.545
+
+							<th>T R I C K
+							<td>3.532
+
+							<th>V E C T O R
+							<td>3.595
+					</table>
+				</div>
+
+				<div id="needy-knob" class="module-section">
+					<img src='img/NeedyKnobComponent.svg' class='diagram'>
+					<h2>On the Subject of Knobs</h2>
+					<p class='flavour-text'>
+						Needlessly complicated and endlessly needy. Imagine if such expertise were used to make something other than diabolical puzzles.
+					</p>
+
+					<ul><li>
+						The knob can be turned to one of four different positions.
+					</li><li>
+						The knob must be in the correct position when this module's timer hits zero.
+					</li><li>
+						The correct position can be determined by the on/off configuration of the twelve LEDs.
+					</li><li>
+						Knob positions are relative to the 'UP' label, which may be rotated.
+					</li></ul>
+
+					<h3>LED Configurations</h3>
+
+					<h4>RIGHT Position:</h4>
+					<table style='display: inline-table'>
+						<tr><td>.<td>.<td>.<td>X<td>.<td>.
+						<tr><td>.<td>.<td>.<td>.<td>.<td>.
+					</table>
+
+					<h4>LEFT Position:</h4>
+					<table style='display: inline-table'>
+						<tr><td> <td> <td> <td> <td>X<td>
+						<tr><td>.<td>.<td>.<td>.<td>.<td>.
+					</table>
+
+					<h4>UP Position:</h4>
+					<table style='display: inline-table'>
+						<tr><td>.<td>.<td>.<td>.<td>X<td>X
+						<tr><td>.<td>.<td>.<td>.<td>.<td>.
+					</table>
+					<table style='display: inline-table'>
+						<tr><td>.<td>.<td>.<td>.<td>.<td>.
+						<tr><td>.<td>.<td>.<td>.<td>X<td>X
+					</table>
+
+					<h4>DOWN Position:</h4>
+					If none of the above apply, then set the knob to the down position.
+
+					<h5>Table Legend:</h5>
+					<table style='display: inline-table'>
+						<tr><td>X<td> Light must be ON
+						<tr><td> <td> Light must be OFF
+						<tr><td>.<td> Light may be ignored
+					</table>
+				</div>
+
+				<div id="needy-misc" class="module-section">
+					<div class='vertical-spacer-small'></div>
+					<img src='img/NeedyComponent.svg' class='diagram' />
+					<div class='new-block-formatting-context'>
+						<h1>Section 2: Needy Modules</h1>
+						<p>
+							Needy modules cannot be disarmed, but pose a recurrent hazard.
+						</p><p>
+							Needy modules can be identified as a module with a small 2&#8209;digit timer in the top center. Interacting with the bomb may cause them to become activated. Once activated, these needy modules must be tended to regularly before their timer expires in order to prevent a strike.
+						</p><p>
+							Stay observant: needy modules may reactivate at any time.
+						</p>
+					</div>
+
+					<div class='vertical-spacer-smaller'></div>
+
+					<img src='img/NeedyVentComponent.svg' class='diagram' />
+					<h2>On the Subject of Venting Gas</h2>
+					<p class='flavour-text'>
+						Computer hacking is hard work! Well, it usually is. This job could probably be performed by a simple drinking bird pressing the same key over and over again.
+					</p>
+					<ul><li>
+						Respond to the computer prompts by pressing </br> "Y" for "VENT GAS?"" or "N" for "DETONATE?".
+					</li></ul>
+
+					<div class='vertical-spacer-smaller'></div>
+
+					<img src='img/NeedyDischargeComponent.svg' class='diagram' />
+					<h2>On the Subject of Capacitor Discharge</h2>
+					<p class='flavour-text'>
+						I'm going to guess that this is just meant to occupy your attention, because otherwise this is some shoddy electronics work.
+					</p>
+					<ul><li>
+						Discharge the capacitor before it overloads by holding down the lever.
+					</li></ul>
+				</div>
+
+				<div id="password" class="module-section">
+					<img src='img/PasswordComponent.svg' class='diagram'>
+					<h2>On the Subject of Passwords</h2>
+					<p class='flavour-text'>
+						Fortunately this password doesn't seem to meet standard government security requirements: 22 characters, mixed case, numbers in random order without any palindromes above length 3.
+					</p>
+
+					<ul><li>
+						The buttons above and below each letter will cycle through the possibilities for that Position.
+					</li><li>
+						Only one combination of the available letters will match a password below.
+					</li><li>
+						Press the submit button once the correct word has been set.
+					</li></ul>
+
+					<table class='password-table'>
+						<tr>
+							<th colspan='2' rowspan='3'>A
+							<th>B
+							<td>about
+
+							<th rowspan='17' class='repeaters-spacer'></th>
+							<th rowspan='17' class='repeaters-spacer'></th>
+							<th rowspan='17' class='repeaters-spacer'></th>
+
+							<th colspan='1' rowspan='5'>S
+							<th colspan='2' rowspan='1'>M
+							<td>small
+						<tr>
+							<th>F
+							<td>after
+
+							<th colspan='2' rowspan='1'>O
+							<td>sound
+						<tr>
+							<th>G
+							<td>again
+
+							<th colspan='2' rowspan='1'>P
+							<td>spell
+						<tr>
+							<th colspan='3' rowspan='1'>B
+							<td>below
+
+							<th colspan='1' rowspan='2'>T
+							<th>I
+							<td>still
+						<tr>
+							<th colspan='3' rowspan='1'>C
+							<td>could
+
+							<th>U
+							<td>study
+						<tr>
+							<th colspan='3' rowspan='1'>E
+							<td>every
+
+							<th colspan='1' rowspan='6'>TH
+							<th colspan='1' rowspan='3'>E
+							<th>I
+							<td>their
+						<tr>
+							<th colspan='2' rowspan='2'>F
+							<th>I
+							<td>first
+
+							<th>R
+							<td>there
+						<tr>
+							<th>O
+							<td>found
+
+							<th>S
+							<td>these
+						<tr>
+							<th colspan='3' rowspan='1'>G
+							<td>great
+
+							<th colspan='1' rowspan='2'>IN
+							<th>G
+							<td>thing
+						<tr>
+							<th colspan='3' rowspan='1'>H
+							<td>house
+
+							<th>K
+							<td>think
+						<tr>
+							<th colspan='2' rowspan='2'>L
+							<th>A
+							<td>large
+
+							<th colspan='2' rowspan='1'>R
+							<td>three
+						<tr>
+							<th>E
+							<td>learn
+
+							<th colspan='1' rowspan='6'>W
+							<th colspan='2' rowspan='1'>A
+							<td>water
+						<tr>
+							<th colspan='3' rowspan='1'>N
+							<td>never
+
+							<th colspan='1' rowspan='2'>H
+							<th>E
+							<td>where
+						<tr>
+							<th colspan='3' rowspan='1'>O
+							<td>other
+
+							<th>I
+							<td>which
+						<tr>
+							<th colspan='1' rowspan='3'>P
+							<th colspan='1' rowspan='2'>LA
+							<th>C
+							<td>place
+
+							<th colspan='1' rowspan='2'>O
+							<th>R
+							<td>world
+						<tr>
+							<th>N
+							<td>plant
+
+							<th>U
+							<td>would
+						<tr>
+							<th colspan='2' rowspan='1'>O
+							<td>point
+
+							<th colspan='2' rowspan='1'>R
+							<td>write
+						<tr>
+							<th colspan='3' rowspan='1'>R
+							<td>right
+					</table>
+				</div>
+
+				<div id="simon" class="module-section">
+					<img src='img/SimonComponent.svg' class='diagram'>
+					<h2>On the Subject of Simon Says</h2>
+					<p class='flavour-text'>
+						This is like one of those toys you played with as a kid where you have to match the pattern that appears, except this one is a knockoff that was probably purchased at a dollar store.
+					</p>
+
+					<ol><li>
+						One of the four colored buttons will flash.
+					</li><li>
+						Using the correct diagram below, press the button with the corresponding color.
+					</li><li>
+						The original button will flash, followed by another. Repeat this sequence in order using the color mapping.
+					</li><li>
+						The sequence will lengthen by one each time you correctly enter a sequence until the module is disarmed.
+					</li></ol>
+
+					<table class='repeaters-table'>
+						<tr>
+							<th colspan='1' class='repeaters-spacer'></th>
+							<th>Vowels</th><th>No Vowels</th>
+						</tr><tr>
+							<th>No Strikes</th>
+							<td>
+								<span class='color-blue'>blue</span>
+								</br>
+								<span class='color-red'>red</span>
+								<img src='img/simon/Vowel_0.png' class='simon-diagram'>
+								<span class='color-yellow'>yellow</span>
+								</br>
+								<span class='color-green'>green</span>
+							</td><td>
+								<span class='color-blue'>blue</span>
+								</br>
+								<span class='color-red'>red</span>
+								<img src='img/simon/NoVowel_0.png' class='simon-diagram'>
+								<span class='color-yellow'>yellow</span>
+								</br>
+								<span class='color-green'>green</span>
+							</td>
+						</tr><tr>
+							<th>One Strike</th>
+							<td>
+								<span class='color-blue'>blue</span>
+								</br>
+								<span class='color-red'>red</span>
+								<img src='img/simon/Vowel_1.png' class='simon-diagram'>
+								<span class='color-yellow'>yellow</span>
+								</br>
+								<span class='color-green'>green</span>
+							</td><td>
+								<span class='color-blue'>blue</span>
+								</br>
+								<span class='color-red'>red</span>
+								<img src='img/simon/NoVowel_1.png' class='simon-diagram'>
+								<span class='color-yellow'>yellow</span>
+								</br>
+								<span class='color-green'>green</span>
+						</tr><tr>
+							<th>Two Strikes</th>
+							<td>
+								<span class='color-blue'>blue</span>
+								</br>
+								<span class='color-red'>red</span>
+								<img src='img/simon/Vowel_2.png' class='simon-diagram'>
+								<span class='color-yellow'>yellow</span>
+								</br>
+								<span class='color-green'>green</span>
+							</td><td>
+								<span class='color-blue'>blue</span>
+								</br>
+								<span class='color-red'>red</span>
+								<img src='img/simon/NoVowel_2.png' class='simon-diagram'>
+								<span class='color-yellow'>yellow</span>
+								</br>
+								<span class='color-green'>green</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="whos-on-first" class="module-section">
+					<img src='img/WhosOnFirstComponent.svg' class='diagram'>
+					<h2>On the Subject of Who's on First</h2>
+					<p class='flavour-text'>
+						This contraption is like something out of a sketch comedy routine, which might be funny if it wasn't connected to a bomb. I'll keep this brief, as words only complicate matters.
+					</p>
+
+					<ol><li>
+						Read the display and use step 1 to determine which button label to <u>read</u>.
+					</li><li>
+						Using this button label, use step 2 determine which button to <u>push</u>.
+					</li><li>
+						Repeat until the module has been disarmed.
+					</li></ol>
+
+					<h3>Step 1:</h3>
+					<p>
+						Based on the display, <u>read</u> the label of a particular button and proceed to step 2:
+					</p>
+
+					<table class='whos-on-first-step1-table'>
+					<tr>
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'></th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>BLANK</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>C</th>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>CEE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>DISPLAY</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>FIRST</th>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+					<tr>
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>HOLD ON</th>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>LED</th>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>LEAD</th>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>LEED</th>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>NO</th>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>NOTHING</th>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+					<tr>
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>OKAY</th>
+							</tr><tr>
+								
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr><tr>
+								
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>RED</th>
+							</tr><tr>
+
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>READ</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>REED</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>SAYS</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>SEE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+					<tr>
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>THEIR</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>THERE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>THEY'RE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>THEY ARE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>UR</th>
+							</tr><tr>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>YES</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+					<tr>
+						<td>
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>YOU</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>YOUR</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>YOU'RE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+
+						<td><table>
+							<tr>
+								<th class='whos-on-first-look-at-display' colspan='2'>YOU ARE</th>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td class='whos-on-first-look-at'><img src='img/eye-icon.png' alt='Look At' style='height: 1em;'/></td>
+							</tr>
+						</table>
+						<td>
+					</table>
+
+					<h3>Step 2:</h3>
+
+					<p>
+						Using the label from step 1, <u>push the first button</u> that appears in its corresponding list:
+					</p>
+
+					<table class='whos-on-first-step2-table'>
+						<tr>
+							<th>'BLANK':</th>
+							<td>WAIT, RIGHT, OKAY, MIDDLE, BLANK</td>
+
+						</tr><tr>
+							<th>'DONE':</th>
+							<td>SURE, UH HUH, NEXT, WHAT?, YOUR, UR, YOU'RE, HOLD, LIKE, YOU, U, YOU ARE, UH UH, DONE</td>
+
+						</tr><tr>
+							<th>'FIRST':</th>
+							<td>LEFT, OKAY, YES, MIDDLE, NO, RIGHT, NOTHING, UHHH, WAIT, READY, BLANK, WHAT, PRESS, FIRST</td>
+
+						</tr><tr>
+							<th>'HOLD':</th>
+							<td>YOU ARE, U, DONE, UH UH, YOU, UR, SURE, WHAT?, YOU'RE, NEXT, HOLD</td>
+
+						</tr><tr>
+							<th>'LEFT':</th>
+							<td>RIGHT, LEFT</td>
+
+						</tr><tr>
+							<th>'LIKE':</th>
+							<td>YOU'RE, NEXT, U, UR, HOLD, DONE, UH UH, WHAT?, UH HUH, YOU, LIKE</td>
+
+						</tr><tr>
+							<th>'MIDDLE':</th>
+							<td>BLANK, READY, OKAY, WHAT, NOTHING, PRESS, NO, WAIT, LEFT, MIDDLE</td>
+
+						</tr><tr>
+							<th>'NEXT':</th>
+							<td>WHAT?, UH HUH, UH UH, YOUR, HOLD, SURE, NEXT</td>
+
+						</tr><tr>
+							<th>'NO':</th>
+							<td>BLANK, UHHH, WAIT, FIRST, WHAT, READY, RIGHT, YES, NOTHING, LEFT, PRESS, OKAY, NO</td>
+
+						</tr><tr>
+							<th>'NOTHING':</th>
+							<td>UHHH, RIGHT, OKAY, MIDDLE, YES, BLANK, NO, PRESS, LEFT, WHAT, WAIT, FIRST, NOTHING</td>
+
+						</tr><tr>
+							<th>'OKAY':</th>
+							<td>MIDDLE, NO, FIRST, YES, UHHH, NOTHING, WAIT, OKAY</td>
+
+						</tr><tr>
+							<th>'PRESS':</th>
+							<td>RIGHT, MIDDLE, YES, READY, PRESS</td>
+
+						</tr><tr>
+							<th>'READY':</th>
+							<td>YES, OKAY, WHAT, MIDDLE, LEFT, PRESS, RIGHT, BLANK, READY</td>
+
+						</tr><tr>
+							<th>'RIGHT':</th>
+							<td>YES, NOTHING, READY, PRESS, NO, WAIT, WHAT, RIGHT</td>
+
+						</tr><tr>
+							<th>'SURE':</th>
+							<td>YOU ARE, DONE, LIKE, YOU'RE, YOU, HOLD, UH HUH, UR, SURE</td>
+
+						</tr><tr>
+							<th>'U':</th>
+							<td>UH HUH, SURE, NEXT, WHAT?, YOU'RE, UR, UH UH, DONE, U</td>
+
+						</tr><tr>
+							<th>'UHHH':</th>
+							<td>READY, NOTHING, LEFT, WHAT, OKAY, YES, RIGHT, NO, PRESS, BLANK, UHHH</td>
+
+						</tr><tr>
+							<th>'UH HUH':</th>
+							<td>UH HUH</td>
+
+						</tr><tr>
+							<th>'UH UH':</th>
+							<td>UR, U, YOU ARE, YOU'RE, NEXT, UH UH</td>
+
+						</tr><tr>
+							<th>'UR':</th>
+							<td>DONE, U, UR</td>
+
+						</tr><tr>
+							<th>'WAIT':</th>
+							<td>UHHH, NO, BLANK, OKAY, YES, LEFT, FIRST, PRESS, WHAT, WAIT</td>
+
+						</tr><tr>
+							<th>'WHAT':</th>
+							<td>UHHH, WHAT</td>
+
+						</tr><tr>
+							<th>'WHAT?':</th>
+							<td>YOU, HOLD, YOU'RE, YOUR, U, DONE, UH UH, LIKE, YOU ARE, UH HUH, UR, NEXT, WHAT?</td>
+
+						</tr><tr>
+							<th>'YES':</th>
+							<td>OKAY, RIGHT, UHHH, MIDDLE, FIRST, WHAT, PRESS, READY, NOTHING, YES</td>
+
+						</tr><tr>
+							<th>'YOU':</th>
+							<td>SURE, YOU ARE, YOUR, YOU'RE, NEXT, UH HUH, UR, HOLD, WHAT?, YOU</td>
+
+						</tr><tr>
+							<th>'YOUR':</th>
+							<td>UH UH, YOU ARE, UH HUH, YOUR</td>
+
+						</tr><tr>
+							<th>'YOU'RE':</th>
+							<td>YOU, YOU'RE</td>
+
+						</tr><tr>
+							<th>'YOU ARE':</th>
+							<td>YOUR, NEXT, LIKE, UH HUH, WHAT?, DONE, UH UH, HOLD, YOU, U, YOU'RE, SURE, UR, YOU ARE</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="wire-sequence" class="module-section">
+					<img src='img/WireSequenceComponent.svg' class='diagram'>
+					<h2>On the Subject of Wire Sequences</h2>
+					<p class='flavour-text'>
+						It's hard to say how this mechanism works. The engineering is pretty impressive, but there must have been an easier way to manage nine wires.
+					</p>
+
+					<ul><li>
+						Within this module there are several panels with wires on them, but only one panel is visible at a time. Switch to the next panel by using the down button and the previous panel by using the up button.
+					</li><li>
+						Do not switch to the next panel until you are sure that you have cut all necessary wires on the current panel.
+					</li><li>
+						Cut the wires as directed by the following table. Wire occurrences are cumulative over all panels within the module.
+					</li></ul>
+					<div style='clear:both'></div>
+
+					<div style='display: flex; gap: 20px; flex-wrap: wrap;'>
+						<table class='red-table'>
+							<tr><th colspan='2' class='header'>Red Wires
+							<tr><th class='first-col'>Occurrence<th>Cut if:
+							<tr><td class='first-col'><span class='color-red'>red</span> 1<td class='second-col'>C
+							<tr><td class='first-col'><span class='color-red'>red</span> 2<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-red'>red</span> 3<td class='second-col'>A
+							<tr><td class='first-col'><span class='color-red'>red</span> 4<td class='second-col'>A / C
+							<tr><td class='first-col'><span class='color-red'>red</span> 5<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-red'>red</span> 6<td class='second-col'>A / C
+							<tr><td class='first-col'><span class='color-red'>red</span> 7<td class='second-col'>A / B / C
+							<tr><td class='first-col'><span class='color-red'>red</span> 8<td class='second-col'>A / B
+							<tr><td class='first-col'><span class='color-red'>red</span> 9<td class='second-col'>B
+						</table>
+
+						<table class='blue-table'>
+							<tr><th colspan='2' class='header'>Blue Wires</th>
+							<tr><th class='first-col'>Occurrence<th>Cut if:
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 1<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 2<td class='second-col'>A / C
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 3<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 4<td class='second-col'>A
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 5<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 6<td class='second-col'>B / C
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 7<td class='second-col'>C
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 8<td class='second-col'>A / C
+							<tr><td class='first-col'><span class='color-blue'>blue</span> 9<td class='second-col'>A
+						</table>
+
+						<table class='black-table'>
+							<tr><th colspan='2' class='header'>Black Wires</th>
+							<tr><th class='first-col'>Occurrence</th><th>Cut if:</th>
+							<tr><td class='first-col'><span class='color-black'>black</span> 1<td class='second-col'>A / B / C
+							<tr><td class='first-col'><span class='color-black'>black</span> 2<td class='second-col'>A / C
+							<tr><td class='first-col'><span class='color-black'>black</span> 3<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-black'>black</span> 4<td class='second-col'>A / C
+							<tr><td class='first-col'><span class='color-black'>black</span> 5<td class='second-col'>B
+							<tr><td class='first-col'><span class='color-black'>black</span> 6<td class='second-col'>B / C
+							<tr><td class='first-col'><span class='color-black'>black</span> 7<td class='second-col'>A / B
+							<tr><td class='first-col'><span class='color-black'>black</span> 8<td class='second-col'>C
+							<tr><td class='first-col'><span class='color-black'>black</span> 9<td class='second-col'>C
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<a href='#' class='back-to-top'>↑ Top</a>
+</body>
+</html> 
